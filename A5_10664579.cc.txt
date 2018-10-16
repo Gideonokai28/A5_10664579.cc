@@ -1,0 +1,44 @@
+//assignment 5
+//10664579
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+
+
+int main()
+{ string stdName[5];
+  int stdID[5];
+  int stdAge[5];
+  char stdGend[5];
+  double stdSc[5];
+  char stdGr[5];
+  cout<<"Input the students names "<<endl;
+for(int i=0;i<=4;i++)
+cin>>stdName[i];
+cout<<"Input the students ID numbers "<<endl;
+for(int k=0;k<=4;k++)
+cin>>stdID[k];
+cout<<"Input the ages of the students"<<endl;
+for(int l=0;l<=4;l++)
+cin>>stdAge[l];
+cout<<"Input their genders "<<endl;
+for(int m=0;m<=4;m++)
+cin>>stdGend[m];
+cout<<"Input their scores "<<endl;
+for(int n=0;n<=4;n++)
+cin>>stdSc[n];
+cout<<"input their grades "<<endl;
+for(int o=0;o<=4;o++)
+cin>>stdGr[o];
+
+ofstream std;
+std.open("new.txt");
+std<<"ID number"<<"\tName"<<"\tAge"<<"\tGender"<<"\tScore"<<"\tGrade"<<endl;
+for(int i=0;i<=4;i++)
+    std<<stdID[i]<<"\t\t"<<stdName[i]<<"\t"<<stdAge[i]<<"\t"<<stdGend[i]<<"\t"<<stdSc[i]<<"\t"<<stdGr[i]<<endl;
+return 0;
+}
+
+
